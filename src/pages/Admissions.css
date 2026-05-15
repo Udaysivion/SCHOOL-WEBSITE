@@ -1,5 +1,38 @@
 .admissions-page { padding-top: 80px; }
 
+/* Funding */
+.adm-funding { background: #020617; }
+
+.adm-funding__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px;
+}
+
+.adm-funding__card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 18px; padding: 28px 24px; position: relative; overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.adm-funding__card:hover { transform: translateY(-4px); border-color: rgba(37,99,235,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+
+.adm-funding__num {
+  font-size: 3rem; font-weight: 900; line-height: 1;
+  background: linear-gradient(135deg, rgba(37,99,235,0.3), rgba(124,58,237,0.3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 12px; display: block;
+}
+
+.adm-funding__card h4 { font-size: 0.95rem; font-weight: 700; color: #E2E8F0; margin-bottom: 10px; }
+.adm-funding__card p { font-size: 0.83rem; color: #64748B; line-height: 1.7; }
+
+.adm-funding__note {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2);
+  border-radius: 14px; padding: 18px 22px;
+}
+
+.adm-funding__note p { font-size: 0.88rem; color: #94A3B8; line-height: 1.65; }
+
 /* Hero */
 .adm-hero {
   position: relative;
