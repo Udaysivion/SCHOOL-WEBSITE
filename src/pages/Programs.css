@@ -1,0 +1,218 @@
+.programs-page { padding-top: 80px; }
+
+/* Hero */
+.prog-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #020617, #0a1628, #0d2020);
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.prog-hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.prog-hero__orb--1 {
+  width: 500px; height: 500px;
+  top: -150px; left: -80px;
+  background: radial-gradient(circle, rgba(13,148,136,0.3) 0%, transparent 70%);
+}
+
+.prog-hero__orb--2 {
+  width: 400px; height: 400px;
+  bottom: -100px; right: -60px;
+  background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
+}
+
+.prog-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prog-hero__inner .badge { margin-bottom: 20px; }
+
+.prog-hero__title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.prog-hero__subtitle {
+  font-size: 1.05rem;
+  color: #94A3B8;
+  line-height: 1.75;
+}
+
+/* List */
+.prog-list { background: #030712; }
+
+.prog-list__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Accordion Card */
+.prog-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.prog-card--open {
+  border-color: var(--accent, #2563EB);
+  box-shadow: 0 0 0 1px var(--glow, rgba(37,99,235,0.2)), 0 16px 40px rgba(0,0,0,0.3);
+}
+
+.prog-card__header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.prog-card__header:hover { background: rgba(255,255,255,0.03); }
+
+.prog-card__icon-wrap {
+  width: 64px; height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--accent, #2563EB), color-mix(in srgb, var(--accent, #2563EB) 70%, #fff));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px var(--glow, rgba(37,99,235,0.3));
+}
+
+.prog-card__header-text {
+  flex: 1;
+}
+
+.prog-card__header-text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.prog-card__header-text p {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.prog-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.prog-card__age {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #94A3B8;
+  white-space: nowrap;
+}
+
+.prog-card__chevron {
+  color: #64748B;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.prog-card__chevron--open {
+  transform: rotate(180deg);
+  color: var(--light, #3B82F6);
+}
+
+.prog-card__body {
+  padding: 0 32px 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 0;
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+.prog-card__body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 28px;
+}
+
+.prog-card__desc {
+  font-size: 0.92rem;
+  color: #94A3B8;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.prog-card__intensity {
+  font-size: 0.83rem;
+  color: #64748B;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.prog-card__intensity span {
+  font-weight: 700;
+  color: var(--light, #3B82F6);
+  margin-right: 6px;
+}
+
+.prog-card__features-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 16px;
+}
+
+.prog-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prog-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: #94A3B8;
+}
+
+.prog-card__features li svg { color: var(--light, #3B82F6); flex-shrink: 0; }
+
+/* CTA */
+.prog-cta { background: linear-gradient(135deg, #0a0f1e, #0F172A); }
+
+@media (max-width: 768px) {
+  .prog-card__header { padding: 20px; flex-wrap: wrap; }
+  .prog-card__body { padding: 0 20px 24px; }
+  .prog-card__body-grid { grid-template-columns: 1fr; gap: 24px; }
+  .prog-card__meta { width: 100%; }
+}
